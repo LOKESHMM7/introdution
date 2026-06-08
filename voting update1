@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int age;
+    char voter_id;
+
+    printf("Enter Age: ");
+    scanf("%d", &age);
+
+    /* Age Validation */
+    if(age < 0 || age > 120)
+    {
+        printf("Invalid Age");
+    }
+    else if(age < 18)
+    {
+        printf("Not Eligible for Voting");
+    }
+    else
+    {
+        printf("Do you have Voter ID? (Y/N): ");
+        scanf(" %c", &voter_id);
+
+        if(voter_id == 'Y' || voter_id == 'y')
+        {
+            printf("Eligible for Voting");
+        }
+        else
+        {
+            printf("Apply for Voter ID");
+        }
+    }
+
+    return 0;
+}
